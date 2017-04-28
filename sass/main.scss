@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600');
+
+@import "../deps/bulma/sass/utilities/initial-variables";
+
+// custom styles!
+$family-titles: "Poppins", "Arial", sans-serif;
+$family-primary: "Nunito", "Arial", sans-serif;
+
+$primary: #258ea6;
+$info: #d81e6d;
+$success: #1ed889;
+$text: #293132;
+$text-light: lighten($text, 10);
+$text-strong: $black;
+
+@import "../deps/bulma/bulma";
+
+
+// titles
+* {
+    font-weight: 600;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $family-titles;
+    font-weight: 600;
+}
+
+.hero.is-medium {
+    .title {
+        &:after {
+            display: block;
+            content: '';
+            position: relative;
+            top: 100%;
+            margin-top: 0.2rem;
+            left: 0;
+            width: 4rem;
+            height: 0.25rem;
+            background-color: $white;
+        }
+        margin-bottom: 2rem;
+    }
+}
+.hero {
+    .title:after {
+        display: none;
+    }
+    .subtitle:after {
+        display: none;
+    }
+}
+
+.content {  
+    h1,h2,h3 { 
+        &:after { 
+            display: block;
+            content: '';
+            position: relative;
+            top: 100%;
+            margin-top: 0.2rem;
+            left: 0;
+            width: 4rem;
+            height: 0.25rem;
+            background-color: $primary;
+
+        }
+    }
+    
+    &.is-small {
+        h1,h2,h3 {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &.is-large {
+        h1,h2,h3 {
+            &:after {
+                height: 0.75rem;
+                width: 8rem;
+            }
+        }
+    }
+}
