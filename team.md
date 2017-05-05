@@ -1,14 +1,26 @@
 ---
-layout: page
+layout: team
 title: Team
 description: Meet the team!
 permalink: /team/
 navigation: true
 ---
 
-## Developers
-
-TODO: include list of maintainers etc here
-
 # Want to get involved?
-Create a new GitHub issue [here](https://github.com/open-ticket/openticket-meta/issues) and we'll reach out to you with details of how to join our Slack team. Soon, we'll create a portal for automatic invites. (Probably after I finish my exams) :sob:
+Feel free to pick out any issue and work on it! See our contributing guides for help, and don't hesitate to reach out to any of the maintainers on any of the linked social media platforms.
+
+Also, you are cordially invited to join our Openticket Slack team. A [code of conduct](https://github.com/open-ticket/openticket-server/blob/master/CODE_OF_CONDUCT.md) applies.
+
+<article class="message is-danger">
+  <div class="message-header">
+    <p>Note</p>
+  </div>
+  <div class="message-body">
+    The link may take a few moments to load up. This is because we are hosting the tool on [ZEIT now](//zeit.co), who hibernate our process when usage is low and needs to power up again. Nothing to worry about!
+  </div>
+</article>
+
+<a class="button is-large is-primary" href="https://openticket-slack.now.sh/">
+<span class="icon is-medium is-bold"><i class="fa fa-slack"></i></span>
+<span>Join Our Team</span>
+</a>

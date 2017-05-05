@@ -1,0 +1,63 @@
+---
+layout: page
+---
+<h1>The Team</h1>
+
+{% assign team = site.data.team | sort: 'name' %}
+  {% for member in team %}
+    {% assign loopindex = forloop.index | modulo: 3 %}
+    {% if loopindex == 1 %}
+      <div class="columns">
+    {% endif %}
+    <div class="column is-one-third"><div class="card">
+      <div class="card-content">
+        <div class="media">
+          {% if member.img %}
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img src="{{ member.img }}" alt="Image">
+            </figure>
+          </div>
+          {% endif %}
+          <div class="media-content">
+            <p class="title is-4">{{ member.name }}</p>
+            <p class="subtitle is-6"><i class="fa fa-slack"></i> @{{ member.profiles.slack }}</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <h4>
+            {% if member.profiles.twitter %}
+            <a href="https://twitter.com/{{ member.profiles.twitter }}"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+            {% if member.profiles.messenger %}
+            <a href="https://m.me/{{ member.profiles.messenger }}"><i class="fa fa-facebook-square"></i></a>
+            {% endif %}
+            {% if member.profiles.github %}
+            <a href="https://github.com/{{ member.profiles.github }}"><i class="fa fa-github"></i></a>
+            {% endif %}
+            {% if member.profiles.linkedin %}
+            <a href="https://linkedin.com/in/{{ member.profiles.linkedin }}"><i class="fa fa-linkedin"></i></a>
+            {% endif %}
+            {% if member.profiles.website %}
+            <a href="{{ member.profiles.website }}"><i class="fa fa-globe"></i></a>
+            {% endif %}
+          </h4>
+          <p>
+          {% for interest in member.interests %}
+          <span class="tag">{{ interest }}</span>
+          {% endfor %}
+          </p>
+        </div>
+      </div>
+    </div></div>
+    {% if loopindex == 0 %}
+      </div>
+    {% endif %}
+  {% endfor %}
+  {% assign mod3 = team | size | modulo: 3 %}
+  {% if mod3 != 0 %}
+    </div>
+  {% endif %}
+
+{{ content }}
