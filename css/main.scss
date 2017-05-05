@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "../deps/bulma/sass/utilities/initial-variables";
+@import "bulma/sass/utilities/initial-variables";
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:600");
 // custom styles!
@@ -15,7 +15,7 @@ $text: #293132;
 $text-light: lighten($text, 10);
 $text-strong: $black;
 
-@import "../deps/bulma/bulma";
+@import "bulma/bulma";
 
 
 // titles
