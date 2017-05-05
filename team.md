@@ -16,7 +16,7 @@ Also, you are cordially invited to join our Openticket Slack team. A [code of co
     <p>Note</p>
   </div>
   <div class="message-body">
-    The link may take a few moments to load up. This is because we are hosting the tool on [ZEIT now](//zeit.co), who hibernate our process when usage is low and needs to power up again. Nothing to worry about!
+    The link may take a few moments to load up. This is because we are hosting the tool on <a href="https://zeit.co/">ZEIT now</a>, who hibernate our process when usage is low and needs to power up again. Nothing to worry about!
   </div>
 </article>
 
