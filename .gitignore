@@ -1,5 +1,5 @@
-node_modules
-deps/bulma
-css/*
-!css/.gitkeep
+_site
 .sass-cache
+.jekyll-metadata
+vendor
+.bundle

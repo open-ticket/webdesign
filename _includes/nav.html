@@ -1,0 +1,25 @@
+<nav class="nav has-shadow" id="top">
+    {% assign pages = site.pages %}
+
+    {% assign sorted_pages = pages | where: "navigation",true | sort: "order" %}
+    <div class="container">
+        <div class="nav-left">
+            <a class="nav-item" href="../index.html">
+                <h2 class="strong">{{ site.title }}</h2>
+            </a>
+        </div>
+        <span class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+            {% for p in sorted_pages %}
+            <a class="nav-item is-tab {% if page.url == p.url %} is-active{% endif %}"
+                href="{{ p.url | replace: 'index.html','' | prepend: site.baseurl }}">
+                    {{p.title}}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</nav>
